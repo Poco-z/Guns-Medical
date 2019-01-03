@@ -1,0 +1,28 @@
+@layout("/common/_container.html"){
+<div class="ibox float-e-margins">
+    <div class="ibox-content">
+        <div class="form-horizontal">
+
+            <div class="row">
+                <div class="col-sm-6 b-r">
+                            <#input id="paientIdcard" name="居民身份证号" value="${item.paientIdcard}" underline="true"/>
+                            <#input id="paientName" name="居民姓名" value="${item.paientName}" />
+                </div>
+
+                <div class="col-sm-6">
+                            <#input id="paientMoney" name="医保余额" value="${item.paientMoney}" />
+                </div>
+            </div>
+
+            <div class="row btn-group-m-t">
+                <div class="col-sm-10">
+                    <#button btnCss="info" name="提交" id="ensure" icon="fa-check" clickFun="PatientInfoInfoDlg.editSubmit()"/>
+                    <#button btnCss="danger" name="取消" id="cancel" icon="fa-eraser" clickFun="PatientInfoInfoDlg.close()"/>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="${ctxPath}/static/modular/patient/patientInfo/patientInfo_info.js"></script>
+@}

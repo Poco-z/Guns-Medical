@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.guns.modular.system.dao.OrderMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.stylefeng.guns.modular.system.model.Order">
+        <id column="id" property="id" />
+        <result column="patient_idcard" property="patientIdcard" />
+        <result column="patient_name" property="patientName" />
+        <result column="order_time" property="orderTime" />
+        <result column="order_place" property="orderPlace" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, patient_idcard, patient_name, order_time, order_place
+    </sql>
+
+</mapper>

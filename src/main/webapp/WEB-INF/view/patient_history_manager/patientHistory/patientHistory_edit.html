@@ -1,0 +1,33 @@
+@layout("/common/_container.html"){
+<div class="ibox float-e-margins">
+    <div class="ibox-content">
+        <div class="form-horizontal">
+
+            <div class="row">
+                <div class="col-sm-6 b-r">
+                            <#input id="id" name="编号" value="${item.id}" underline="true"/>
+                            <#input id="patientIdcard" name="居民身份证号" value="${item.patientIdcard}" underline="true"/>
+                            <#input id="patientName" name="居民姓名" value="${item.patientName}" underline="true"/>
+                            <#input id="patientSym" name="症状描述" value="${item.patientSym}" />
+                </div>
+
+                <div class="col-sm-6">
+                            <#input id="patientDoctor" name="主治医生" value="${item.patientDoctor}" underline="true"/>
+                            <#input id="patientMedicine" name="就诊药物" value="${item.patientMedicine}" underline="true"/>
+                            <#input id="patientHistoryDate" name="就诊日期" value="${item.patientHistoryDate}" underline="true"/>
+                            <#input id="takeprice" name="花费" value="${item.takeprice}" />
+                </div>
+            </div>
+
+            <div class="row btn-group-m-t">
+                <div class="col-sm-10">
+                    <#button btnCss="info" name="提交" id="ensure" icon="fa-check" clickFun="PatientHistoryInfoDlg.editSubmit()"/>
+                    <#button btnCss="danger" name="取消" id="cancel" icon="fa-eraser" clickFun="PatientHistoryInfoDlg.close()"/>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="${ctxPath}/static/modular/patient_history_manager/patientHistory/patientHistory_info.js"></script>
+@}

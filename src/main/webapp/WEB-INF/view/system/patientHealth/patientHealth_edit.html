@@ -1,0 +1,33 @@
+@layout("/common/_container.html"){
+<div class="ibox float-e-margins">
+    <div class="ibox-content">
+        <div class="form-horizontal">
+
+            <div class="row">
+                <div class="col-sm-6 b-r">
+                            <#input id="id" name="" value="${item.id}" underline="true"/>
+                            <#input id="heartJump" name="" value="${item.heartJump}" underline="true"/>
+                            <#input id="bloodPressure" name="" value="${item.bloodPressure}" underline="true"/>
+                            <#input id="bloodOx" name="" value="${item.bloodOx}" />
+                </div>
+
+                <div class="col-sm-6">
+                            <#input id="pulse" name="" value="${item.pulse}" underline="true"/>
+                            <#input id="date" name="" value="${item.date}" underline="true"/>
+                            <#input id="patientIdcard" name="" value="${item.patientIdcard}" underline="true"/>
+                            <#input id="patientName" name="" value="${item.patientName}" />
+                </div>
+            </div>
+
+            <div class="row btn-group-m-t">
+                <div class="col-sm-10">
+                    <#button btnCss="info" name="提交" id="ensure" icon="fa-check" clickFun="PatientHealthInfoDlg.editSubmit()"/>
+                    <#button btnCss="danger" name="取消" id="cancel" icon="fa-eraser" clickFun="PatientHealthInfoDlg.close()"/>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="${ctxPath}/static/modular/system/patientHealth/patientHealth_info.js"></script>
+@}

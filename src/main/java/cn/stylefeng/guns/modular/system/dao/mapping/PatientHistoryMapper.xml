@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.guns.modular.system.dao.PatientHistoryMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.stylefeng.guns.modular.system.model.PatientHistory">
+        <id column="id" property="id" />
+        <result column="patient_idcard" property="patientIdcard" />
+        <result column="patient_name" property="patientName" />
+        <result column="patient_sym" property="patientSym" />
+        <result column="patient_doctor" property="patientDoctor" />
+        <result column="patient_medicine" property="patientMedicine" />
+        <result column="patient_history_date" property="patientHistoryDate" />
+        <result column="takeprice" property="takeprice" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, patient_idcard, patient_name, patient_sym, patient_doctor, patient_medicine, patient_history_date, takeprice
+    </sql>
+
+</mapper>

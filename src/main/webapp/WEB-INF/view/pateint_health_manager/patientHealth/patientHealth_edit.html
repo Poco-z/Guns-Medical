@@ -1,0 +1,33 @@
+@layout("/common/_container.html"){
+<div class="ibox float-e-margins">
+    <div class="ibox-content">
+        <div class="form-horizontal">
+
+            <div class="row">
+                <div class="col-sm-6 b-r">
+                            <#input id="id" name="编号" value="${item.id}" underline="true"/>
+                            <#input id="heartJump" name="心跳" value="${item.heartJump}" underline="true"/>
+                            <#input id="bloodPressure" name="血压" value="${item.bloodPressure}" underline="true"/>
+                            <#input id="bloodOx" name="血氧" value="${item.bloodOx}" />
+                </div>
+
+                <div class="col-sm-6">
+                            <#input id="pulse" name="脉搏" value="${item.pulse}" underline="true"/>
+                            <#input id="date" name="测量日期" value="${item.date}" underline="true"/>
+                            <#input id="patientIdcard" name="居民身份证号" value="${item.patientIdcard}" underline="true"/>
+                            <#input id="patientName" name="居民姓名" value="${item.patientName}" />
+                </div>
+            </div>
+
+            <div class="row btn-group-m-t">
+                <div class="col-sm-10">
+                    <#button btnCss="info" name="提交" id="ensure" icon="fa-check" clickFun="PatientHealthInfoDlg.editSubmit()"/>
+                    <#button btnCss="danger" name="取消" id="cancel" icon="fa-eraser" clickFun="PatientHealthInfoDlg.close()"/>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="${ctxPath}/static/modular/pateint_health_manager/patientHealth/patientHealth_info.js"></script>
+@}
